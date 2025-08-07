@@ -26,6 +26,7 @@
 import numpy as np
 from io import StringIO
 from datetime import date
+import matplotlib.pyplot as plt
 
 # del range
 
@@ -130,6 +131,25 @@ print("Anomaly temp : " , anom)
 line()
 
 #create a dataset of weather of different cities and try to create a 2D map
+#Matplotlib parts
+
+manchester = np.random.randint(10,20,30)
+lancashire = np.random.randint(15,25,30)
+
+days = np.arange(1,31)
+# plt.plot(days,manchester)
+plt.plot(days,lancashire)
+
+plt.scatter(days,lancashire,color='orange')
+
+plt.title("Temparature Data - Manchester ")
+plt.xlabel("Days")
+
+plt.ylabel("Temparature (*C)")
+plt.grid(True)
+
+plt.show()
+
 
 
 
